@@ -1,0 +1,78 @@
+@import '../globals.scss';
+
+
+.viewers{
+
+    &__row{
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 64px 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        
+    }
+
+    &__column{
+
+    }
+
+    &__background{
+     
+    }
+
+    &__image{
+        position: relative;
+        z-index: 0; 
+        box-shadow: 8px 4px 57px 75px rgba(46, 143, 255, 0.2);
+        max-width: 100%;
+    }
+
+
+    &__cards{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__title{
+        font-family: $font-family;
+        font-weight: 900;
+        font-size: 48px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: white;
+        margin-bottom: 64px;
+    }
+
+    &__subtitle{
+        font-family: $font-family;
+        font-weight: 900;
+        font-size: 48px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: #14ffe4;
+    }
+
+    &__card{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        justify-content: space-between;
+        &-image{
+            max-width: 350px;
+        }
+        
+        &-description{
+            font-family: $font-family;
+            font-weight: 900;
+            font-size: 16px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            text-align: justify;
+            color: #fff;
+            max-width: 350px;
+
+        }
+    }
+}

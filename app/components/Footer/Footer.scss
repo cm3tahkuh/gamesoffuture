@@ -1,0 +1,73 @@
+
+@import '../../globals.scss';
+
+.footer{
+    background: #1e2227;
+    border-top: 3px solid #0085ff;
+    position: relative;
+    z-index: 10;
+
+
+    &__row{
+        display: flex;
+        justify-content: space-between;
+        padding: 16px 0px;
+
+    }
+
+    &__address-block{
+        gap: 0px 56px;
+        display: flex;
+        flex-direction: row;
+        max-width: 433px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__address-place{
+        font-family:$font-family;
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 0.1em;
+        text-align: center;
+        color: #fff;
+        font-style: normal;
+    }
+
+    &__address-email{
+        font-family:$font-family;
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: 0.05em;
+        text-align: center;
+        color: #fff;
+        font-style: normal;
+    }
+
+    &__address-number{
+        font-family:$font-family;
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: 0.05em;
+        text-align: center;
+        color: #fff;
+        font-style: normal;
+    }
+
+    &__logos-block{
+        display: flex;
+        gap: 20px;
+    }
+
+    &__logo{
+
+    }
+
+    &__socials{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+}

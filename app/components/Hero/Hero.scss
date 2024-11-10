@@ -1,0 +1,25 @@
+@import '../../globals.scss';
+
+
+
+.hero{
+  position: relative;
+    &__background{
+      width: 100%;
+      
+    }
+  
+    &__title{
+      font-weight: 900;
+  // font-size: 96px;
+  font-size: calc(24px + 72 * (100vw / 1920));
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: $font-family;
+  position: absolute;
+    bottom: 234px;
+    right: 62px;
+    }
+  }
+  

@@ -1,0 +1,49 @@
+@import "../globals.scss";
+
+.organizators {
+  background-color: $black-color;
+  &__row {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  &__column {
+    display: flex;
+    border-bottom: 1px solid #0085ff;
+    align-items: center;
+    padding: 40px 0px;
+  }
+
+  &__image {
+    padding-right: 90px;
+    max-width: 330px;
+  }
+
+  &__text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: start;
+  }
+
+  &__title {
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 0.05em;
+    text-align: justify;
+    color: #fff;
+  }
+
+  &__description {
+    font-family: $font-family;
+    font-weight: 300;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    white-space: pre-line;
+    color: #fff;
+    text-align: justify;
+    line-height: 26px;
+  }
+}
+
