@@ -1,8 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-    basePath: "/gameoffuture",
-    output: "export", 
-    reactStrictMode: true,
-  };
+const nextConfig = {};
 
 export default nextConfig;
