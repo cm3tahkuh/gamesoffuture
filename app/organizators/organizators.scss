@@ -47,3 +47,27 @@
   }
 }
 
+@media(max-width: 920px){
+  .organizators{
+
+    &__title{
+      font-size: 20px;
+    }
+
+    &__description{
+      font-size: 18px;
+    }
+
+    &__image{
+
+        padding-right: 0px; 
+        max-width: 300px;
+    
+    }
+
+    &__column{
+      gap: 20px;
+      flex-direction: column;
+    }
+  }
+}

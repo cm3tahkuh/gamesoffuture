@@ -1,25 +1,31 @@
-@import '../../globals.scss';
+@import "../../globals.scss";
 
-
-
-.hero{
+.hero {
   position: relative;
-    &__background{
-      width: 100%;
-      
-    }
-  
-    &__title{
-      font-weight: 900;
-  // font-size: 96px;
-  font-size: calc(24px + 72 * (100vw / 1920));
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
-  color: #fff;
-  font-family: $font-family;
-  position: absolute;
+  &__background {
+    width: 100%;
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: calc(24px + 72 * (100vw / 1920));
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: $font-family;
+    position: absolute;
     bottom: 234px;
     right: 62px;
-    }
   }
-  
+}
+
+@media(max-width: 960px){
+  .hero{
+
+
+      &__title{
+        font-size: calc(16px + 32 * (100vw / 1366));
+        bottom: 100px;
+      }
+  }
+}

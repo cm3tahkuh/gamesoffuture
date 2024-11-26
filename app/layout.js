@@ -8,6 +8,7 @@ export const metadata = {
 
 import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
+import Menu from "./components/Menu/Menu";
 import './globals.scss';
 
 export default function RootLayout({ children }) {
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
       <div className="page-container">
       <div className="content-wrap">
         <Header/>
+        <Menu/>
         {children}
         </div>
         <Footer/>

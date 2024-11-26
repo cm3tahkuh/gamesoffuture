@@ -4,6 +4,7 @@
     background-color: $black-color;
     box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.5);
     position: relative;
+    display: block;
     z-index: 10;
     &__row {
       display: flex;
@@ -53,6 +54,11 @@
     background-repeat: no-repeat; 
     background-size: 100% 2px;
     background-position: left bottom; 
-    padding-bottom: 2px; 
 
+}
+
+@media(max-width: 820px){
+  .header{
+      display: none;
+  }
 }
