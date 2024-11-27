@@ -7,6 +7,7 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 
 export const News = () =>{
+  
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
   
@@ -61,7 +62,7 @@ export const News = () =>{
     );
   }
   
-  // Массив данных о новостях
+
   const newsData = [
     {
       title: 'Турнир по FIFA',

@@ -100,7 +100,22 @@ export const Header = () => {
                 Организаторы
               </Link>
             </motion.li>
+            <motion.li
+              className="header__link"
+              variants={{
+                hidden: { opacity: 0, y: 10 },
+                visible: { opacity: 1, y: 0 },
+              }}
+            >
+              <Link
+                href="/registration"
+                className={`${pathname === "/registration" ? "active" : ""}`}
+              >
+                регистрация
+              </Link>
+            </motion.li>
           </motion.ul>
+          
 
           {/* Социальные иконки */}
           <motion.div

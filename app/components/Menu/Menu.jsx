@@ -32,6 +32,9 @@ const Menu = () => {
             <li>
               <Link href="/organizators">Организаторы</Link>
             </li>
+            <li>
+              <Link href="/registration">Регистрация</Link>
+            </li>
           </ul>
         </div>
       )}
