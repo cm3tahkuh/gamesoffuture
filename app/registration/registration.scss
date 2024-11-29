@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   margin: 55px 0px;
+  padding: 0px 15px;
 
   .form-wrapper {
     background: #292f36;
@@ -199,4 +200,10 @@
     width: 16px;
     height: 16px;
     cursor: pointer;
+  }
+
+  @media(max-width:600px){
+    .add-player-form{
+      flex-direction: column;
+    }
   }
