@@ -68,12 +68,31 @@ const RegistrationForm = () => {
     setNewPlayer({ name: "", role: "" });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validateForm()) return;
-    alert("Форма успешно отправлена!");
-
+  
+    try {
+      const response = await fetch("/api/sendToTelegram", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ formData, players }),
+      });
+  
+      if (response.ok) {
+        alert("Форма успешно отправлена!");
+        setFormData({ teamName: "", groupNumber: "", captainTelegram: "" });
+        setPlayers([]);
+      } else {
+        const error = await response.json();
+        alert(`Ошибка: ${error.message}`);
+      }
+    } catch (error) {
+      alert("Произошла ошибка при отправке данных.");
+      console.error(error);
+    }
   };
+  
 
   const removePlayer = (index) => {
     setPlayers(players.filter((_, i) => i !== index));
