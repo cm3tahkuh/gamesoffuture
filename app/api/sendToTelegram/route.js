@@ -15,12 +15,14 @@ export async function POST(req) {
 
 
     const message = `
-      📋 Новая заявка на турнир:
-      🏆 Команда: ${formData.teamName}
-      🔢 Номер группы: ${formData.groupNumber}
-      👤 Капитан: ${formData.captainTelegram}
-      🧑‍🤝‍🧑 Участники:
-      ${players.map((p, i) => `${i + 1}. ${p.name} - ${p.role || "игрок"}`).join("\n")}
+📋 Новая заявка на турнир:
+⚽ Спорт: ${formData.selectedSport}
+🗺 Адрес: ${formData.selectedLocation}
+🏆 Команда: ${formData.teamName}
+🔢 Номер группы: ${formData.groupNumber}
+👤 Капитан: ${formData.captainTelegram}
+🧑‍🤝‍🧑 Участники:
+${players.map((player, i) => `${i + 1}. ${player.name} - ${player.role || "игрок"}`).join("\n")}
     `;
 
 

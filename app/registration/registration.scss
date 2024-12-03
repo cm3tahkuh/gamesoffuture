@@ -7,6 +7,31 @@
   margin: 55px 0px;
   padding: 0px 15px;
 
+  .sport-selection {
+    display: flex;
+    gap: 20px;
+  }
+
+  .sport-label {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+
+    & div {
+      font-weight: bold;
+      font-family: "Inter", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      color: #fff;
+    }
+
+    & input {
+      max-width: fit-content;
+    }
+  }
+
   .form-wrapper {
     background: #292f36;
     color: #fff;
@@ -140,7 +165,6 @@
           font-size: 24px;
           border-radius: 4px;
           cursor: pointer;
-          
 
           &:hover {
             background: #0056b3;
@@ -171,39 +195,51 @@
 }
 
 .form-error-message {
-    color: red;
-    margin-bottom: 10px;
-    font-family: $font-family;
-    font-weight: 400;
-    font-size: 16px;
-    color: #fff;
-  }
-
+  color: red;
+  margin-bottom: 10px;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+}
 
 .error-message {
-    color: #ff4d4f;
-    margin-bottom: 10px;
-    margin-top: 1rem;
-    font-family: $font-family;
-    font-weight: 400;
-    font-size: 16px;
-    color: #fff;
-  }
+  color: #ff4d4f;
+  margin-bottom: 10px;
+  margin-top: 1rem;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+}
 
-  .role-selection label {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  
-  input[type="checkbox"] {
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
-  }
+.role-selection label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 
-  @media(max-width:600px){
-    .add-player-form{
-      flex-direction: column;
-    }
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .add-player-form {
+    flex-direction: column;
   }
+}
+
+.form-address {
+  max-width: 100%;
+  background: #1e2227;
+  padding: 7px;
+  border: 1px solid #2f2f2f;
+  border-radius: 15px;
+  outline: none;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #757572;
+  font-size: 16px;
+}

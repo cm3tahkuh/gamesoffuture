@@ -8,7 +8,7 @@ export const Footer = () =>{
                 <div className="footer__row">
                     <address className="footer__address-block">
                         <p className='footer__address-place'>г. Челябинск, Комсомольский проспект, 113а</p>
-                    <a className='footer__address-email' href="mailto:123@live.preco.ru">123@live.preco.ru</a>
+                    <a className='footer__address-email' href="mailto:123@live.preco.ru">gapchukaa@preco.ru</a>
                     <a className='footer__address-number' href="tel:+73512144111">+7 (351) 214-41-11</a>
                     </address>
                     <div className="footer__logos-block">
