@@ -54,23 +54,21 @@
   }
 
   &__card-paragraph {
-    font-family: "Inter", sans-serif;
-    font-weight: 200;
-    font-size: 24px;
-    letter-spacing: 0.05em;
+    font-family: $font-family;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.03em;
     text-align: justify;
     color: #fff;
-    width: 100%;
   }
 
   &__card-date {
-    font-family: "Inter", sans-serif;
-    font-weight: 200;
-    font-size: 18px;
-    letter-spacing: 0.05em;
-    text-align: center;
+    font-family: $font-family;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    text-align: justify;
     color: #fff;
-    width: 100%;
   }
 
   &__card__text-block {
