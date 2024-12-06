@@ -28,10 +28,25 @@ const RegistrationForm = () => {
       setError("Введите имя игрока.");
       return false;
     }
-    if (!formData.selectedSport) {
-      setError("Выберите вид спорта.");
-      return false;
-    }
+
+     // Validate full name
+     const nameParts = newPlayer.name.trim().split(/\s+/);
+     if (nameParts.length !== 3) {
+       setError("Введите ФИО: Фамилия Имя Отчество");
+       return false;
+     }
+ 
+     const isValidName = nameParts.every(
+       (part) => /^[А-ЯЁ][а-яё]+$/.test(part)
+     );
+     if (!isValidName) {
+       setError(
+         "Каждая часть ФИО должна начинаться с заглавной буквы и содержать только буквы русского алфавита."
+       );
+       return false;
+     }
+
+
 
     const limits = playerLimits[formData.selectedSport];
     const roleCount = players.reduce(
