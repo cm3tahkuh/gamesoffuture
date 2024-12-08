@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion, useInView } from "framer-motion";
 import styles from "./registration.scss";
 
 const RegistrationForm = () => {
@@ -13,8 +14,8 @@ const RegistrationForm = () => {
     teamName: "",
     groupNumber: "",
     captainTelegram: "",
-    selectedLocation: "",
-    selectedSport: "",
+    selectedLocation: "Комсомольский проспект 113а",
+    selectedSport: "баскетбол",
   });
 
   const playerLimits = {
@@ -29,24 +30,19 @@ const RegistrationForm = () => {
       return false;
     }
 
-     // Validate full name
-     const nameParts = newPlayer.name.trim().split(/\s+/);
-     if (nameParts.length !== 3) {
-       setError("Введите ФИО: Фамилия Имя Отчество");
-       return false;
-     }
- 
-     const isValidName = nameParts.every(
-       (part) => /^[А-ЯЁ][а-яё]+$/.test(part)
-     );
-     if (!isValidName) {
-       setError(
-         "Каждая часть ФИО должна начинаться с заглавной буквы и содержать только буквы русского алфавита."
-       );
-       return false;
-     }
+    const nameParts = newPlayer.name.trim().split(/\s+/);
+    if (nameParts.length !== 3) {
+      setError("Введите ФИО: Фамилия Имя Отчество");
+      return false;
+    }
 
-
+    const isValidName = nameParts.every((part) => /^[А-ЯЁ][а-яё]+$/.test(part));
+    if (!isValidName) {
+      setError(
+        "Каждая часть ФИО должна начинаться с заглавной буквы и содержать только буквы русского алфавита."
+      );
+      return false;
+    }
 
     const limits = playerLimits[formData.selectedSport];
     const roleCount = players.reduce(
@@ -93,10 +89,6 @@ const RegistrationForm = () => {
   };
 
   const validateForm = () => {
-    if (!formData.selectedSport) {
-      setFormError("Выберите вид спорта.");
-      return false;
-    }
     if (!formData.teamName.trim()) {
       setFormError("Введите название команды.");
       return false;
@@ -115,10 +107,7 @@ const RegistrationForm = () => {
       );
       return false;
     }
-    if (!formData.selectedLocation) {
-      setFormError("Выберите адрес.");
-      return false;
-    }
+
     const limits = playerLimits[formData.selectedSport];
     const roleCount = players.reduce(
       (acc, player) => {
@@ -162,8 +151,8 @@ const RegistrationForm = () => {
           teamName: "",
           groupNumber: "",
           captainTelegram: "",
-          selectedLocation: "",
-          selectedSport: "",
+          selectedLocation: "Комсомольский проспект 113а",
+          selectedSport: "баскетбол",
         });
         setPlayers([]);
       } else {
@@ -196,61 +185,51 @@ const RegistrationForm = () => {
       },
       { капитан: 0, игрок: 0, запасной: 0 }
     );
-  
+
     if (
       roleCount["капитан"] > limits["капитан"] ||
       roleCount["игрок"] > limits["игрок"] ||
       roleCount["запасной"] > limits["запасной"]
     ) {
-      alert("Количество игроков превышает лимит для выбранного вида спорта. Удалите лишних игроков, чтобы сменить вид спорта.");
-      return; 
+      alert(
+        "Количество игроков превышает лимит для выбранного вида спорта. Удалите лишних игроков, чтобы сменить вид спорта."
+      );
+      return;
     }
-  
+
     setFormData((prevFormData) => ({
       ...prevFormData,
       selectedSport: newSport,
     }));
   };
-  
 
   return (
-    <div className="form-container">
+    <motion.div
+      className="form-container"
+      initial="hidden"
+      animate="visible"
+      variants={{
+        hidden: { opacity: 0 },
+        visible: {
+          opacity: 1,
+          transition: { staggerChildren: 0.3 },
+        },
+      }}
+    >
       <div className="form-wrapper">
         <h2>РЕГИСТРАЦИЯ НА ТУРНИР</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <div className="sport-selection">
-              <div className="sport-label">
-                <input
-                  type="radio"
-                  name="sport"
-                  value="баскетбол"
-                  checked={formData.selectedSport === "баскетбол"}
-                  onChange={(e) => handleSportChange(e.target.value)}
-                />
-                <div>Баскетбол</div>
-              </div>
-              <div className="sport-label">
-                <input
-                  type="radio"
-                  name="sport"
-                  value="футбол"
-                  checked={formData.selectedSport === "футбол"}
-                  onChange={(e) => handleSportChange(e.target.value)}
-                />
-                <div>Футбол</div>
-              </div>
-              <div className="sport-label">
-                <input
-                  type="radio"
-                  name="sport"
-                  value="хоккей"
-                  checked={formData.selectedSport === "хоккей"}
-                  onChange={(e) => handleSportChange(e.target.value)}
-                />
-                <div>Хоккей</div>
-              </div>
-            </div>
+            <label>Выберите вид спорта</label>
+            <select
+              className="form-sport"
+              value={formData.selectedSport}
+              onChange={(e) => handleSportChange(e.target.value)}
+            >
+              <option value="баскетбол">Баскетбол</option>
+              <option value="футбол">Футбол</option>
+              <option value="хоккей">Хоккей</option>
+            </select>
           </div>
           <div className="form-group">
             <label>Адрес</label>
@@ -354,7 +333,7 @@ const RegistrationForm = () => {
           <button type="submit">Отправить заявку</button>
         </form>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

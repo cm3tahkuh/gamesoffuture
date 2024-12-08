@@ -3,6 +3,8 @@
 import "./News.scss";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
+import { scrapeChannel } from "@/app/utils/telegramScraper";
 import { motion } from "framer-motion";
 
 export const News = () => {
@@ -64,8 +66,7 @@ export const News = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          {" "}
-          ПОСЛЕДНИЕ НОВОСТИ{" "}
+          ПОСЛЕДНИЕ НОВОСТИ
         </motion.h1>
         <div className="news__row">
           {news.map((post) => (
@@ -85,10 +86,14 @@ export const News = () => {
               )}
 
               <div className="news__card__text-block">
-                <p className="news__card-paragraph">{post.text}</p>
-                <div className="news__card-date">
-                  {new Date(post.date).toLocaleString()}
-                </div>
+                <p className="news__card-paragraph">
+                  {post.text.length > 150
+                    ? post.text.substring(0, 150) + "..."
+                    : post.text}
+                </p>
+                <Link href={`/news/${post.id}`} className="news__card-paragraph">
+                    Подробнее...
+                </Link>
               </div>
             </div>
           ))}
