@@ -1,0 +1,41 @@
+@use "../../globals" as *;
+
+.scroll {
+  &__block {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 30;
+  }
+
+  &__button {
+    background-color: #2e3033;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 820px) {
+  .scroll {
+    &__block {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 30;
+    }
+
+    &__button {
+      background-color: #2e3033;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 30px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  }
+}

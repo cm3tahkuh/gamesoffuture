@@ -1,0 +1,108 @@
+[33mcommit 34f1d3adcd3cc45e7bcbc650e5c4ae8c2994506f[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mpuppeteer[m[33m, [m[1;31morigin/puppeteer[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: cm3tahkuh <markplay13498@gmail.com>
+Date:   Sun Dec 8 20:25:32 2024 +0500
+
+    changes in news main block and registration form
+
+[33mcommit a549747c40d96c9d18fd853858f53524eb092efa[m
+Author: cm3tahkuh <markplay13498@gmail.com>
+Date:   Fri Dec 6 11:07:13 2024 +0500
+
+    registration form validation was changed
+
+[33mcommit 7674ee957044ad4752de9166418d4b9440ffdffd[m
+Author: Одинцов Эдуард Вячеславович <22200970@live.preco.ru>
+Date:   Fri Dec 6 11:04:04 2024 +0500
+
+    registration form validation was changed
+
+[33mcommit 871898de396efb87bb5fda164e9507dd407bf6a6[m
+Author: Одинцов Эдуард Вячеславович <22200970@live.preco.ru>
+Date:   Fri Dec 6 09:52:11 2024 +0500
+
+    puppeteer lib was replaced on cheerio html parser
+
+[33mcommit f85873cdfec815137fd8ca5c8936ab2d20ed5170[m
+Author: cm3tahkuh <markplay13498@gmail.com>
+Date:   Thu Dec 5 23:23:39 2024 +0500
+
+    for vercel
+
+[33mcommit 6578c562e21505e54ba6d4445b3f0ceceab19df3[m
+Author: cm3tahkuh <markplay13498@gmail.com>
+Date:   Thu Dec 5 20:12:15 2024 +0500
+
+    news from telegram channel was fully completed
+
+[33mcommit fc939ce18800be8179c2b2c0e73cf662ff6582d5[m
+Author: cm3tahkuh <markplay13498@gmail.com>
+Date:   Tue Dec 3 22:30:54 2024 +0500
+
+    news block was updated, form registration was fully completed
+
+[33mcommit ff4ae7f1f186b1b144c6c1f28dc974176e4e8fd3[m
+Author: cm3tahkuh <markplay13498@gmail.com>
+Date:   Fri Nov 29 20:31:48 2024 +0500
+
+    telegram api send form function was added
+
+[33mcommit abe0df482d006741069815f6888df04d206e8c00[m
+Author: cm3tahkuh <markplay13498@gmail.com>
+Date:   Fri Nov 29 20:04:54 2024 +0500
+
+    adaptive was full completed
+
+[33mcommit 4257482c946b4b120898a6394fa6280c681eb85b[m
+Author: cm3tahkuh <markplay13498@gmail.com>
+Date:   Fri Nov 29 19:29:08 2024 +0500
+
+    react version was changed to 18
+
+[33mcommit af3adba0e132007028e92ea624e9ac451b4b1091[m
+Author: cm3tahkuh <markplay13498@gmail.com>
+Date:   Wed Nov 27 22:26:27 2024 +0500
+
+    form was added
+
+[33mcommit a6d7556894d14eeb2c89ad1e87df579aab5cfcdc[m
+Author: cm3tahkuh <markplay13498@gmail.com>
+Date:   Wed Nov 27 00:37:04 2024 +0500
+
+    90% adaptive was added + adaptive menu button
+
+[33mcommit b962e88439ed5a21e8399a1c219a2a5b8f6e6c7f[m
+Merge: 62fb8cb 85e68ba
+Author: cm3tahkuh <markplay13498@gmail.com>
+Date:   Mon Nov 18 00:52:43 2024 +0500
+
+    animations added
+
+[33mcommit 62fb8cbd0236e9830418b3a261d7e99db32d65de[m
+Author: cm3tahkuh <markplay13498@gmail.com>
+Date:   Mon Nov 18 00:44:37 2024 +0500
+
+    animations added
+
+[33mcommit 85e68ba2c8ccd12e82b1f5a15c11e1989a6a2987[m
+Author: cm3tahkuh <92805192+cm3tahkuh@users.noreply.github.com>
+Date:   Mon Nov 11 01:30:27 2024 +0500
+
+    Update publish.yml
+
+[33mcommit 9b0fb273f2cbddd6a4a4c87a5d59cc337747bcba[m
+Author: cm3tahkuh <92805192+cm3tahkuh@users.noreply.github.com>
+Date:   Mon Nov 11 01:28:45 2024 +0500
+
+    Update publish.yml
+
+[33mcommit 3ed6418978309e9d7545138c2154b833cc5e338a[m
+Author: cm3tahkuh <markplay13498@gmail.com>
+Date:   Mon Nov 11 01:22:42 2024 +0500
+
+    all pages here
+
+[33mcommit c017536a471e98f533dcd1cab53dd1477ca5a492[m
+Author: cm3tahkuh <markplay13498@gmail.com>
+Date:   Sat Nov 2 19:35:03 2024 +0500
+
+    Initial commit from Create Next App

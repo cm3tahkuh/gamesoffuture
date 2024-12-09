@@ -22,7 +22,7 @@ export const News = () => {
         const data = await response.json();
 
         setNews(data.messages);
-        console.log(data);
+        
       } catch (err) {
         setError(err.message);
       } finally {

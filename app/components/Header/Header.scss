@@ -1,11 +1,15 @@
-@import '../../globals.scss';
+@use '../../globals' as *;
 
 .header {
-    background-color: $black-color;
-    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.5);
-    position: relative;
-    display: block;
-    z-index: 10;
+  background-color: #1e2227;
+  box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.5);
+  position: fixed;
+  display: block;
+  z-index: 10;
+  width: 100%;
+  top: 0; 
+  left: 0;
+  
     &__row {
       display: flex;
       align-items: center;
