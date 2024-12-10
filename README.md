@@ -2,6 +2,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+```Set-ExecutionPolicy RemoteSigned -Scope CurrentUser``` write this in powershell terminal
+
 First, run the development server:
 
 ```bash
