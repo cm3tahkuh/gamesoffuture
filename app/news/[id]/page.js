@@ -48,23 +48,34 @@ export default function FullNews() {
 
   return (
     <div className="news__full">
+      <h1 className="news__id__title">Здесь должна быть глава</h1>
+      <div className="news__card-date">
+        {new Date(newsItem.date).toLocaleString()}
+      </div>
+      <div className="news__id__card">
       {newsItem.photos?.length > 0 && (
-        <div className="news__card">
-          {newsItem.photos.map((photo, index) => (
+        <img
+          src={newsItem.photos[0]}
+          alt="Главное изображение"
+          className="news__card-image-main"
+          loading="lazy"
+        />
+      )}
+
+        <p className="news__paragraph">{newsItem.text}</p>
+        <div className="news__bottom__block">
+        {newsItem.photos?.length > 1 &&
+          newsItem.photos.map((photo, index) => (
             <img
               key={index}
               src={photo}
               alt={`Photo ${index}`}
-              className="news__card-image"
+              className="news__bottom__block-image"
               loading="lazy"
             />
           ))}
-          <p className="news__paragraph">{newsItem.text}</p>
-          <div className="news__card-date">
-            {new Date(newsItem.date).toLocaleString()}
           </div>
-        </div>
-      )}
+      </div>
     </div>
   );
 }

@@ -4,7 +4,6 @@ import "./News.scss";
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { scrapeChannel } from "@/app/utils/telegramScraper";
 import { motion } from "framer-motion";
 
 export const News = () => {
@@ -22,7 +21,6 @@ export const News = () => {
         const data = await response.json();
 
         setNews(data.messages);
-        
       } catch (err) {
         setError(err.message);
       } finally {
@@ -68,21 +66,34 @@ export const News = () => {
         >
           ПОСЛЕДНИЕ НОВОСТИ
         </motion.h1>
+
         <div className="news__row">
           {news.map((post) => (
+            <article key={post.id} className="news__card">
+              <img src={post.photos[0]} alt="Превью" loading="lazy" />
+              <div className="news__card__content">
+                <h2 className="news__card__heading">
+                  {/* {post.text.length > 150
+                    ? post.text.substring(0, 150) + "..."
+                    : post.text} */}
+                    Заголовок {post.id}
+                </h2>
+                <Link className="news__card__link" href={`/news/${post.id}`}>
+                  Подробнее...
+                </Link>
+              </div>
+            </article>
+          ))}
+
+          {/* {news.map((post) => (
             <div key={post.id} className="news__column">
               {post.photos?.length > 0 && (
-                <div className="grid gap-2 mb-4">
-                  {post.photos.map((photo, index) => (
-                    <img
-                      key={index}
-                      src={photo}
-                      alt={`Photo ${index}`}
-                      className="news__card-image"
-                      loading="lazy"
-                    />
-                  ))}
-                </div>
+                <img
+                  src={post.photos[0]}
+                  alt="Preview"
+                  className="news__card-image"
+                  loading="lazy"
+                />
               )}
 
               <div className="news__card__text-block">
@@ -91,12 +102,43 @@ export const News = () => {
                     ? post.text.substring(0, 150) + "..."
                     : post.text}
                 </p>
-                <Link href={`/news/${post.id}`} className="news__card-paragraph">
-                    Подробнее...
+                <Link
+                  href={`/news/${post.id}`}
+                  className="news__card-paragraph"
+                >
+                  Подробнее...
                 </Link>
               </div>
             </div>
-          ))}
+          ))} */}
+
+          {/* 
+          {news.map((post) => (
+            <div key={post.id} className="news__column">
+              {post.photos?.length > 0 && (
+                <img
+                  src={post.photos[0]}
+                  alt="Preview"
+                  className="news__card-image"
+                  loading="lazy"
+                />
+              )}
+
+              <div className="news__card__text-block">
+                <p className="news__card-paragraph">
+                  {post.text.length > 150
+                    ? post.text.substring(0, 150) + "..."
+                    : post.text}
+                </p>
+                <Link
+                  href={`/news/${post.id}`}
+                  className="news__card-paragraph"
+                >
+                  Подробнее...
+                </Link>
+              </div>
+            </div>
+          ))} */}
         </div>
       </div>
     </div>
