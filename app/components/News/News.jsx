@@ -67,79 +67,24 @@ export const News = () => {
           ПОСЛЕДНИЕ НОВОСТИ
         </motion.h1>
 
-        <div className="news__row">
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="news__row"
+        >
           {news.map((post) => (
             <article key={post.id} className="news__card">
               <img src={post.photos[0]} alt="Превью" loading="lazy" />
               <div className="news__card__content">
-                <h2 className="news__card__heading">
-                  {/* {post.text.length > 150
-                    ? post.text.substring(0, 150) + "..."
-                    : post.text} */}
-                    Заголовок {post.id}
-                </h2>
+                <h2 className="news__card__heading">{post.title}</h2>
                 <Link className="news__card__link" href={`/news/${post.id}`}>
                   Подробнее...
                 </Link>
               </div>
             </article>
           ))}
-
-          {/* {news.map((post) => (
-            <div key={post.id} className="news__column">
-              {post.photos?.length > 0 && (
-                <img
-                  src={post.photos[0]}
-                  alt="Preview"
-                  className="news__card-image"
-                  loading="lazy"
-                />
-              )}
-
-              <div className="news__card__text-block">
-                <p className="news__card-paragraph">
-                  {post.text.length > 150
-                    ? post.text.substring(0, 150) + "..."
-                    : post.text}
-                </p>
-                <Link
-                  href={`/news/${post.id}`}
-                  className="news__card-paragraph"
-                >
-                  Подробнее...
-                </Link>
-              </div>
-            </div>
-          ))} */}
-
-          {/* 
-          {news.map((post) => (
-            <div key={post.id} className="news__column">
-              {post.photos?.length > 0 && (
-                <img
-                  src={post.photos[0]}
-                  alt="Preview"
-                  className="news__card-image"
-                  loading="lazy"
-                />
-              )}
-
-              <div className="news__card__text-block">
-                <p className="news__card-paragraph">
-                  {post.text.length > 150
-                    ? post.text.substring(0, 150) + "..."
-                    : post.text}
-                </p>
-                <Link
-                  href={`/news/${post.id}`}
-                  className="news__card-paragraph"
-                >
-                  Подробнее...
-                </Link>
-              </div>
-            </div>
-          ))} */}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

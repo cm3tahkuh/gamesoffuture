@@ -12,11 +12,11 @@ export const Header = () => {
   const pathname = usePathname();
 
   return (
-    <motion.div
+    <motion.header
       className="header"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease: 'easeOut' }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
     >
       <div className="container">
         <motion.div
@@ -31,14 +31,14 @@ export const Header = () => {
             },
           }}
         >
-          {/* Логотип */}
+
           {pathname === "/" ? (
             <motion.img
               src="/src/logoHeader.svg"
               alt="HYSKY.PHY Logo"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, ease: 'easeOut' }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
             />
           ) : (
             <Link href="/">
@@ -47,12 +47,11 @@ export const Header = () => {
                 alt="HYSKY.PHY Logo"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, ease: 'easeOut' }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
               />
             </Link>
           )}
 
-          {/* Ссылки */}
           <motion.ul
             className="header__links__block"
             variants={{
@@ -62,18 +61,19 @@ export const Header = () => {
             transition={{ duration: 0.6 }}
           >
             <motion.li
-              className="header__link"
               variants={{
                 hidden: { opacity: 0, y: 10 },
                 visible: { opacity: 1, y: 0 },
               }}
             >
-              <Link href="/" className={`${pathname === "/" ? "active" : ""}`}>
+              <Link
+                href="/"
+                className={`header__link ${pathname === "/" ? "active" : ""}`}
+              >
                 Об играх
               </Link>
             </motion.li>
             <motion.li
-              className="header__link"
               variants={{
                 hidden: { opacity: 0, y: 10 },
                 visible: { opacity: 1, y: 0 },
@@ -81,13 +81,14 @@ export const Header = () => {
             >
               <Link
                 href="/viewers"
-                className={`${pathname === "/viewers" ? "active" : ""}`}
+                className={`header__link ${
+                  pathname === "/viewers" ? "active" : ""
+                }`}
               >
                 Зрителям
               </Link>
             </motion.li>
             <motion.li
-              className="header__link"
               variants={{
                 hidden: { opacity: 0, y: 10 },
                 visible: { opacity: 1, y: 0 },
@@ -95,13 +96,14 @@ export const Header = () => {
             >
               <Link
                 href="/organizators"
-                className={`${pathname === "/organizators" ? "active" : ""}`}
+                className={`header__link ${
+                  pathname === "/organizators" ? "active" : ""
+                }`}
               >
                 Организаторы
               </Link>
             </motion.li>
             <motion.li
-              className="header__link"
               variants={{
                 hidden: { opacity: 0, y: 10 },
                 visible: { opacity: 1, y: 0 },
@@ -109,15 +111,15 @@ export const Header = () => {
             >
               <Link
                 href="/registration"
-                className={`${pathname === "/registration" ? "active" : ""}`}
+                className={`header__link ${
+                  pathname === "/registration" ? "active" : ""
+                }`}
               >
                 регистрация
               </Link>
             </motion.li>
           </motion.ul>
-          
 
-          {/* Социальные иконки */}
           <motion.div
             className="header__socials"
             variants={{
@@ -135,6 +137,6 @@ export const Header = () => {
           </motion.div>
         </motion.div>
       </div>
-    </motion.div>
+    </motion.header>
   );
 };

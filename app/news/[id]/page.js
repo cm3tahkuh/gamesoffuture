@@ -39,42 +39,50 @@ export default function FullNews() {
   }
 
   if (error) {
-    return <p>Ошибка: {error}</p>;
+    return <p className="news__id-metainfo">Ошибка: {error}</p>;
   }
 
   if (!newsItem) {
-    return <p>Новость не найдена.</p>;
+    return <p className="news__id-metainfo">Новость не найдена.</p>;
   }
+
+  const formatText = (text) =>
+    text.split("\n").map((line, index) => (
+      <span key={index}>
+        {line}
+        <br />
+      </span>
+    ));
 
   return (
     <div className="news__full">
-      <h1 className="news__id__title">Здесь должна быть глава</h1>
+      <h1 className="news__id__title">{newsItem.title}</h1>
       <div className="news__card-date">
         {new Date(newsItem.date).toLocaleString()}
       </div>
       <div className="news__id__card">
-      {newsItem.photos?.length > 0 && (
-        <img
-          src={newsItem.photos[0]}
-          alt="Главное изображение"
-          className="news__card-image-main"
-          loading="lazy"
-        />
-      )}
+        {newsItem.photos?.length > 0 && (
+          <img
+            src={newsItem.photos[0]}
+            alt="Главное изображение"
+            className="news__id__card-image"
+            loading="lazy"
+          />
+        )}
 
-        <p className="news__paragraph">{newsItem.text}</p>
+        <p className="news__paragraph">{formatText(newsItem.text)}</p>
         <div className="news__bottom__block">
-        {newsItem.photos?.length > 1 &&
-          newsItem.photos.map((photo, index) => (
-            <img
-              key={index}
-              src={photo}
-              alt={`Photo ${index}`}
-              className="news__bottom__block-image"
-              loading="lazy"
-            />
-          ))}
-          </div>
+          {newsItem.photos?.length > 1 &&
+            newsItem.photos.map((photo, index) => (
+              <img
+                key={index}
+                src={photo}
+                alt={`Photo ${index}`}
+                className="news__bottom__block-image"
+                loading="lazy"
+              />
+            ))}
+        </div>
       </div>
     </div>
   );

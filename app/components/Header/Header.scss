@@ -10,59 +10,58 @@
   top: 0; 
   left: 0;
   
-    &__row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 60px;
-    }
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
 
-    &__links__block {
-      gap: 20px;
-      display: flex;
-      flex-direction: row;
+  &__links__block {
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+  }
 
+  &__link {
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: lowercase;
+    text-align: center;
+    color: $white-color;
+    font-family: "Inter", sans-serif;
+    transition: all 0.2s ease;
+    background-image: linear-gradient(to right, $blue-color, $blue-color); 
+    background-repeat: no-repeat; 
+    background-size: 0px 2px;
+    background-position: left bottom; 
+    padding-bottom: 2px; 
+    text-decoration: none; 
+    transition: all 0.3s ease; 
+
+    &:hover {
+      background-size: 100% 2px;
     }
-    &__link{
-      font-weight: 400;
-      font-size: 16px;
-      text-transform: lowercase;
-      text-align: center;
-      color: $white-color;
-      font-family: "Inter", sans-serif;
-      transition: all 0.2s ease;
+  
+    &.active {
       background-image: linear-gradient(to right, $blue-color, $blue-color); 
       background-repeat: no-repeat; 
-      background-size: 0px 2px;
+      background-size: 100% 2px; 
       background-position: left bottom; 
-      padding-bottom: 2px; 
-      text-decoration: none; 
-      transition: all 0.3s ease; 
-
-
-      &:hover{
-   background-size: 100% 2px;
-      }
-  
-    }
-    &__socials {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
+      pointer-events: none;
     }
   }
 
-  .active{
-    background-image: linear-gradient(to right, $blue-color, $blue-color); 
-    background-repeat: no-repeat; 
-    background-size: 100% 2px;
-    background-position: left bottom; 
-
+  &__socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
 }
 
-@media(max-width: 820px){
-  .header{
-      display: none;
+@media (max-width: 820px) {
+  .header {
+    display: none;
   }
 }

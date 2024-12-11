@@ -23,6 +23,7 @@
     font-weight: 400;
     font-size: 16px;
     letter-spacing: 0.03em;
+    line-height: 1.5;
     text-align: justify;
     color: #fff;
   }
@@ -42,11 +43,7 @@
     gap: 24px;
     align-items: flex-start;
     &-image {
-      max-width: 100%;
-
-      &-small {
-        max-width: 300px;
-      }
+      width: 100%;
     }
   }
 

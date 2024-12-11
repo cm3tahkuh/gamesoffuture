@@ -1,4 +1,6 @@
-@import "../../globals.scss";
+
+
+@use '../../globals' as *;
 
 .news {
   background-color: $black-color;
@@ -94,7 +96,7 @@
     font-weight: 600;
     font-size: 28px;
     letter-spacing: 0.03em;
-    text-align: justify;
+    max-width: 250px;
     color: #fff;
   }
 
