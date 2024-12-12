@@ -58,6 +58,10 @@
     justify-content: center;
     gap: 10px;
   }
+
+  &__socials-logo{
+    max-width: 30px;
+  }
 }
 
 @media (max-width: 820px) {

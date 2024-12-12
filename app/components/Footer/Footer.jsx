@@ -18,8 +18,8 @@ export const Footer = () =>{
                     <a className='footer__address-number' href="tel:+73512144111">+7 (351) 214-41-11</a>
                     </address>
                     <div className="footer__socials">
-                        <a href="#"><img src="/src/telegram2.svg" alt="Telegram icon"></img></a>
-                        <a href="#"><img src="/src/vk2.svg" alt="VK icon"></img></a>
+                        <a href="#"><img src="/src/telegram.svg" alt="Telegram icon"></img></a>
+                        <a href="#"><img src="/src/vk.svg" alt="VK icon"></img></a>
                     </div>
                 </div>
             </div>

@@ -54,10 +54,12 @@
   &__logos-block {
     display: flex;
     gap: 20px;
+    align-items: flex-end;
   }
 
   &__logo {
-    max-width: 150px;
+    max-width: 100px;
+    height: fit-content;
   }
 
   &__socials {

@@ -129,10 +129,10 @@ export const Header = () => {
             transition={{ duration: 0.6 }}
           >
             <motion.a href="#" whileHover={{ scale: 1.1 }}>
-              <img src="/src/telegram.svg" alt="Telegram icon"></img>
+              <img className="header__socials-logo" src="/src/telegram.svg" alt="Telegram icon"></img>
             </motion.a>
             <motion.a href="#" whileHover={{ scale: 1.1 }}>
-              <img src="/src/vk.svg" alt="VK icon"></img>
+              <img className="header__socials-logo" src="/src/vk.svg" alt="VK icon"></img>
             </motion.a>
           </motion.div>
         </motion.div>
