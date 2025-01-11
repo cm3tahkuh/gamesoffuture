@@ -1,4 +1,4 @@
-@import "../../globals.scss";
+@use "@styles/variables";
 
 .footer {
   background: #1e2227;
@@ -22,7 +22,7 @@
   }
 
   &__address-place {
-    font-family: $font-family;
+    font-family: variables.$font-family;
     font-weight: 700;
     font-size: 16px;
     letter-spacing: 0.1em;
@@ -32,7 +32,7 @@
   }
 
   &__address-email {
-    font-family: $font-family;
+    font-family: variables.$font-family;
     font-weight: 500;
     font-size: 16px;
     letter-spacing: 0.05em;
@@ -42,7 +42,7 @@
   }
 
   &__address-number {
-    font-family: $font-family;
+    font-family: variables.$font-family;
     font-weight: 500;
     font-size: 16px;
     letter-spacing: 0.05em;
@@ -121,9 +121,9 @@
       align-items: center;
     }
 
-    &__address-block{
-        align-items: center;
-        justify-content: center;
+    &__address-block {
+      align-items: center;
+      justify-content: center;
     }
   }
 }

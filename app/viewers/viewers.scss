@@ -1,4 +1,4 @@
-@import "../globals.scss";
+@use "@styles/variables";
 
 .viewers {
   &__row {
@@ -8,12 +8,6 @@
     display: flex;
     flex-direction: column;
     gap: 32px;
-  }
-
-  &__column {
-  }
-
-  &__background {
   }
 
   &__image {
@@ -27,70 +21,105 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 100px;
   }
 
   &__title {
-    font-family: $font-family;
-    font-weight: 900;
-    font-size: 48px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: white;
+    font-family: variables.$font-family;
     margin-bottom: 64px;
+    font-weight: 700;
+    font-style: normal;
+    color: #ffffff;
+    font-size: 50px;
+    letter-spacing: -2.1px;
+    text-align: center;
+    line-height: 1.2;
   }
 
-  &__subtitle {
-    font-family: $font-family;
-    font-weight: 900;
-    font-size: 48px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: #14ffe4;
+  &__description {
+
+    max-width: 100%;
+    font-weight: 500;
+    font-style: normal;
+    font-family: variables.$font-family;
+    color: #c1c1c1;
+    font-size: 24px;
+    letter-spacing: -0.7px;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 100px;
   }
 
   &__card {
     display: flex;
-    flex-direction: column;
-    gap: 24px;
-    justify-content: space-between;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    gap: 80px;
+    justify-content: center;
+
+    &:nth-child(2n){
+      flex-direction: row-reverse;
+    }
+
     &-image {
-      max-width: 100%;
+      max-width: 440px;
+      border-radius: 20px;
+      height: 383px;
+      object-fit: cover;
+    }
+
+    &-text-block{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &-title {
+      font-weight: 700;
+      font-style: normal;
+      font-family: variables.$font-family;
+      color: #ffffff;
+      font-size: 50px;
+      letter-spacing: -2px;
+      line-height: 1.2;
+      text-align: left;
     }
 
     &-description {
-      font-family: $font-family;
-      font-weight: 900;
-      font-size: 16px;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      text-align: justify;
-      color: #fff;
-      max-width: 350px;
+      font-family: variables.$font-family;
+      max-width: 442px;
+      font-weight: 400;
+      font-style: normal;
+      color: #dedede;
+      font-size: 24px;
+      letter-spacing: -0.5px;
+      line-height: 1.5;
+      text-align: left;
+
+
     }
   }
 }
 
-@media (max-width: 1500px) {
-  .viewers {
-    &__cards {
-      justify-content: center;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 20px;
-    }
-  }
-}
-
+// @media (max-width: 1500px) {
+//   .viewers {
+//     &__cards {
+//       justify-content: center;
+//       flex-wrap: wrap;
+//       align-items: center;
+//       gap: 80px;
+//     }
+//   }
+// }
 
 @media (max-width: 600px) {
-    .viewers{
-
-        &__title{
-            font-size: 28px;
-        }
-            &__subtitle{
-                font-size: 28px;
-            }
+  .viewers {
+    &__title {
+      font-size: 28px;
     }
-
+    &__subtitle {
+      font-size: 28px;
+    }
+  }
 }

@@ -1,4 +1,4 @@
-@import "../../globals.scss";
+@use "@styles/variables";
 
 .news {
   &__full {
@@ -12,14 +12,14 @@
   }
 
   &__id__title {
-    font-family: $montserrat-font;
+    font-family: variables.$montserrat-font;
     font-size: 32px;
-    color: $white-color;
+    color: variables.$white-color;
     font-weight: 800;
   }
 
   &__paragraph {
-    font-family: $montserrat-font;
+    font-family: variables.$montserrat-font;
     font-weight: 400;
     font-size: 16px;
     letter-spacing: 0.03em;
@@ -29,7 +29,7 @@
   }
 
   &__card-date {
-    font-family: $font-family;
+    font-family: variables.$font-family;
     font-weight: 300;
     font-size: 14px;
     letter-spacing: 0.03em;
@@ -64,7 +64,7 @@
 
 .news__id {
   &-metainfo {
-    font-family: $font-family;
+    font-family: variables.$font-family;
     font-weight: 600;
     font-size: 36px;
     letter-spacing: 0.05em;

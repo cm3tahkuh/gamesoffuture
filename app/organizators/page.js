@@ -3,7 +3,7 @@
 import "./organizators.scss";
 
 import { motion, useInView } from "framer-motion";
-import { useRef } from 'react';
+import { useRef } from "react";
 
 const Organizators = () => {
   return (
@@ -23,7 +23,7 @@ const Organizators = () => {
             }}
           >
             <OrganizatorsColumn
-              image="src/URK_org-logo.svg"
+              image="logos/URK_org-logo.svg"
               alt="УРК логотип"
               title="ПОУ “Уральский региональный колледж”"
               description={`
@@ -33,7 +33,7 @@ const Organizators = () => {
               `}
             />
             <OrganizatorsColumn
-              image="src/YUTY_org-logo.png"
+              image="logos/YUTY_org-logo.png"
               alt="ЮУТУ логотип"
               title="ОУ ВО “Южно-Уральский технологический университет”"
               description={`
@@ -45,7 +45,7 @@ const Organizators = () => {
               `}
             />
             <OrganizatorsColumn
-              image="src/HUSKY_ogr-logo.png"
+              image="logos/HUSKY_ogr-logo.png"
               alt="Хаски логотип"
               title="ССК “Хаски”"
               description={`
@@ -59,7 +59,7 @@ const Organizators = () => {
       </div>
     </main>
   );
-}
+};
 
 function OrganizatorsColumn({ image, alt, title, description }) {
   const ref = useRef(null);
@@ -84,6 +84,5 @@ function OrganizatorsColumn({ image, alt, title, description }) {
     </motion.div>
   );
 }
-
 
 export default Organizators;

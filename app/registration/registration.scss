@@ -1,4 +1,4 @@
-@import "../globals.scss";
+@use "@styles/variables";
 
 .form-container {
   display: flex;
@@ -42,7 +42,7 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
 
     h2 {
-      font-family: $montserrat-font;
+      font-family: variables.$montserrat-font;
       font-weight: 700;
       font-size: 24px;
       text-transform: uppercase;
@@ -59,7 +59,7 @@
           display: block;
           margin-bottom: 0.5rem;
           font-weight: bold;
-          font-family: $font-family;
+          font-family: variables.$font-family;
           font-weight: 400;
           font-size: 16px;
           color: #fff;
@@ -73,7 +73,7 @@
           border-radius: 15px;
           color: #fff;
           outline: none;
-          font-family: $font-family;
+          font-family: variables.$font-family;
           font-weight: 400;
           font-size: 16px;
 
@@ -94,7 +94,7 @@
           padding: 0.5rem;
           border-radius: 16px;
           margin-bottom: 0.5rem;
-          font-family: $font-family;
+          font-family: variables.$font-family;
           font-weight: 400;
           font-size: 16px;
           color: #fff;
@@ -113,7 +113,7 @@
         display: flex;
         gap: 0.5rem;
         flex-direction: column;
-        font-family: $font-family;
+        font-family: variables.$font-family;
         font-weight: 400;
         font-size: 16px;
         color: #fff;
@@ -125,7 +125,7 @@
         }
         input {
           flex: 1;
-          font-family: $font-family;
+          font-family: variables.$font-family;
           font-weight: 400;
           font-size: 16px;
           color: #fff;
@@ -143,13 +143,13 @@
             display: flex;
             align-items: center;
             gap: 0.2rem;
-            font-family: $font-family;
+            font-family: variables.$font-family;
             font-weight: 400;
             font-size: 16px;
             color: #fff;
             input {
               margin: 0;
-              font-family: $font-family;
+              font-family: variables.$font-family;
               font-weight: 400;
               font-size: 16px;
               color: #fff;
@@ -173,7 +173,7 @@
       }
 
       button[type="submit"] {
-        font-family: $font-family;
+        font-family: variables.$font-family;
         font-weight: 400;
         font-size: 16px;
         color: #fff;
@@ -197,7 +197,7 @@
 .form-error-message {
   color: red;
   margin-bottom: 10px;
-  font-family: $font-family;
+  font-family: variables.$font-family;
   font-weight: 400;
   font-size: 16px;
   color: #fff;
@@ -207,7 +207,7 @@
   color: #ff4d4f;
   margin-bottom: 10px;
   margin-top: 1rem;
-  font-family: $font-family;
+  font-family: variables.$font-family;
   font-weight: 400;
   font-size: 16px;
   color: #fff;

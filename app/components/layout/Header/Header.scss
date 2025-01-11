@@ -1,4 +1,4 @@
-@use '../../globals' as *;
+@use "@styles/variables";
 
 .header {
   background-color: #1e2227;
@@ -28,10 +28,10 @@
     font-size: 16px;
     text-transform: lowercase;
     text-align: center;
-    color: $white-color;
+    color: variables.$white-color;
     font-family: "Inter", sans-serif;
     transition: all 0.2s ease;
-    background-image: linear-gradient(to right, $blue-color, $blue-color); 
+    background-image: linear-gradient(to right, variables.$blue-color, variables.$blue-color); 
     background-repeat: no-repeat; 
     background-size: 0px 2px;
     background-position: left bottom; 
@@ -44,7 +44,7 @@
     }
   
     &.active {
-      background-image: linear-gradient(to right, $blue-color, $blue-color); 
+      background-image: linear-gradient(to right, variables.$blue-color, variables.$blue-color); 
       background-repeat: no-repeat; 
       background-size: 100% 2px; 
       background-position: left bottom; 

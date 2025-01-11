@@ -1,6 +1,5 @@
 "use client";
 
-// import "../../globals.scss";
 import "./Header.scss";
 
 import { motion } from "framer-motion";
@@ -8,7 +7,7 @@ import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
-export const Header = () => {
+const Header = () => {
   const pathname = usePathname();
 
   return (
@@ -31,10 +30,9 @@ export const Header = () => {
             },
           }}
         >
-
           {pathname === "/" ? (
             <motion.img
-              src="/src/logoHeader.svg"
+              src="/logos/logoHeader.svg"
               alt="HYSKY.PHY Logo"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -43,7 +41,7 @@ export const Header = () => {
           ) : (
             <Link href="/">
               <motion.img
-                src="/src/logoHeader.svg"
+                src="/logos/logoHeader.svg"
                 alt="HYSKY.PHY Logo"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -129,10 +127,18 @@ export const Header = () => {
             transition={{ duration: 0.6 }}
           >
             <motion.a href="#" whileHover={{ scale: 1.1 }}>
-              <img className="header__socials-logo" src="/src/telegram.svg" alt="Telegram icon"></img>
+              <img
+                className="header__socials-logo"
+                src="/icons/telegram.svg"
+                alt="Telegram icon"
+              ></img>
             </motion.a>
             <motion.a href="#" whileHover={{ scale: 1.1 }}>
-              <img className="header__socials-logo" src="/src/vk.svg" alt="VK icon"></img>
+              <img
+                className="header__socials-logo"
+                src="/icons/vk.svg"
+                alt="VK icon"
+              ></img>
             </motion.a>
           </motion.div>
         </motion.div>
@@ -140,3 +146,5 @@ export const Header = () => {
     </motion.header>
   );
 };
+
+export default Header;

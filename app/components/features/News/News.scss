@@ -1,11 +1,11 @@
 
 
-@use '../../globals' as *;
+@use "@styles/variables";
 
 .news {
-  background-color: $black-color;
+  background-color: variables.$black-color;
   &__title {
-    font-family: $font-family;
+    font-family: variables.$font-family;
     font-weight: 600;
     font-size: 48px;
     letter-spacing: 0.05em;
@@ -33,7 +33,7 @@
   }
 
   &__metainfo {
-    font-family: $font-family;
+    font-family: variables.$font-family;
     font-weight: 600;
     font-size: 36px;
     letter-spacing: 0.05em;
@@ -45,7 +45,7 @@
   }
 
   &__card-title {
-    font-family: $font-family;
+    font-family: variables.$font-family;
     font-weight: 600;
     font-size: 36px;
     letter-spacing: 0.05em;
@@ -92,7 +92,7 @@
   }
 
   &__card__heading {
-    font-family: $font-family;
+    font-family: variables.$font-family;
     font-weight: 600;
     font-size: 28px;
     letter-spacing: 0.03em;
@@ -101,7 +101,7 @@
   }
 
   &__card__link {
-    font-family: $font-family;
+    font-family: variables.$font-family;
     font-weight: 400;
     font-size: 16px;
     letter-spacing: 0.03em;
@@ -126,7 +126,7 @@
   }
 
   &__card-date {
-    font-family: $font-family;
+    font-family: variables.$font-family;
     font-weight: 600;
     font-size: 14px;
     letter-spacing: 0.03em;

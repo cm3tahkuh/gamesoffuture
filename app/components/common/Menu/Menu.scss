@@ -1,4 +1,4 @@
-@use '../../globals' as *;
+@use '@styles/variables';
 
 
 .burger-container {
@@ -43,7 +43,7 @@
   
   .menu a {
     text-decoration: none;
-    font-family: $font-family;
+    font-family: variables.$font-family;
     color: #333;
     font-size: 16px;
     display: block;

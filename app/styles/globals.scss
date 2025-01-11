@@ -1,0 +1,28 @@
+@use './reset.scss' as *;
+@use "@styles/variables";
+
+
+
+
+
+//FOR FOOTER
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  min-height: 100vh;
+  background-color: variables.$black-color;
+}
+
+.content-wrap {
+  flex: 1;
+}
+
+.container {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}

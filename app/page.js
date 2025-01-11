@@ -1,7 +1,7 @@
 
 
-import { Hero } from "./components/Hero/Hero";
-import { News } from "./components/News/News";
+import { Hero } from "./components/features/Hero/Hero";
+import { News } from "./components/features/News/News";
 
 
 export default function Home() {

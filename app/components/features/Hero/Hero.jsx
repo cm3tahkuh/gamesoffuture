@@ -2,6 +2,7 @@
 
 import "./Hero.scss";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export const Hero = () => {
   return (
@@ -9,7 +10,7 @@ export const Hero = () => {
     {/* Анимация фона */}
     <motion.img
       className="hero__background"
-      src="src/mainBg.png"
+      src="images/background/mainBg.png"
       alt="Фон"
       initial={{ scale: 1.1, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}

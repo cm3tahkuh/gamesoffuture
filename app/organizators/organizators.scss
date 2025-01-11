@@ -1,7 +1,7 @@
-@import "../globals.scss";
+@use "@styles/variables";
 
 .organizators {
-  background-color: $black-color;
+  background-color: variables.$black-color;
   &__row {
     max-width: 1600px;
     margin: 0 auto;
@@ -27,7 +27,7 @@
   }
 
   &__title {
-    font-family: $font-family;
+    font-family: variables.$font-family;
     font-weight: 700;
     font-size: 24px;
     letter-spacing: 0.05em;
@@ -36,7 +36,7 @@
   }
 
   &__description {
-    font-family: $font-family;
+    font-family: variables.$font-family;
     font-weight: 300;
     font-size: 20px;
     letter-spacing: 0.05em;

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./ScrollButton.scss";
 
-export const ScrollButton = () => {
+const ScrollButton = () => {
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
@@ -39,3 +39,6 @@ export const ScrollButton = () => {
     </motion.div>
   );
 };
+
+
+export default ScrollButton;

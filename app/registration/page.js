@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, useInView } from "framer-motion";
-import styles from "./registration.scss";
+import "./registration.scss";
 
 const RegistrationForm = () => {
   const [players, setPlayers] = useState([]);
