@@ -6,11 +6,16 @@ import { motion } from "framer-motion";
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import Logo from "../../common/Logo/Logo";
 
 const Header = () => {
   const pathname = usePathname();
 
   return (
+    <>
+    
+    <Logo />
+
     <motion.header
       className="header"
       initial={{ opacity: 0, y: -20 }}
@@ -144,6 +149,7 @@ const Header = () => {
         </motion.div>
       </div>
     </motion.header>
+    </>
   );
 };
 

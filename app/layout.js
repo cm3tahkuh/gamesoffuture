@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Игры будущего",
-  description: "Игры будущего",
+  description: "Игры будущего от Уральского Регионального колледжа - Новости, регистрация на турнир",
 };
 
 import Footer from "./components/layout/Footer/Footer";

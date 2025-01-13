@@ -8,21 +8,21 @@ const Viewers = () => {
   const cards = [
     {
       image:
-        "https://cdn-m.sport24.ru/m/a0a6/413f/e6a7/4cf6/8848/735c/048f/6624/1200_10000_max.jpeg",
+        "/images/viewers/basketball.jpg",
       title: "Баскетбол",
       description:
         "Инновационный формат баскетбола, где команда из 2 игроков и капитана соревнуется сначала в виртуальном пространстве, а затем на реальной площадке с умным мячом и AR-элементами.",
     },
     {
       image:
-        "https://cdn.sovsport.prod.plat.agency/image_9540_1667394453_11zon_e9245b4080.webp",
+        "/images/viewers/football.jpg",
       title: "Футбол",
       description:
         "Новое слово в футболе: 4 игрока и капитан проходят виртуальный этап стратегии, после чего выходят на поле с умным мячом и AR-воротами.",
     },
     {
       image:
-        "https://rt-online.ru/wp-content/uploads/2022/12/Fidzhital-Igry-3.jpg",
+        "/images/viewers/hockey.jpg",
       title: "Хоккей",
       description:
         "Команда из 5 игроков и капитана начинает с виртуальной симуляции, затем переходит на реальный лед с умной шайбой и AR-препятствиями.",
@@ -82,8 +82,8 @@ function Card({ image, title, description }) {
     <motion.div
       ref={ref}
       className="viewers__card"
-      initial={{ opacity: 0, x: 20 }}
-      animate={isInView ? { opacity: 1, x: 0 } : {}}
+      initial={{ opacity: 0, y: 20 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6 }}
     >
       <img className="viewers__card-image" src={image} alt="Card Image" />

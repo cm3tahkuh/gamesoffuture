@@ -15,6 +15,12 @@
   background-color: variables.$black-color;
 }
 
+@media (max-width: 820px) {
+  .page-container {
+    padding-top: 0px;
+  }
+}
+
 .content-wrap {
   flex: 1;
 }

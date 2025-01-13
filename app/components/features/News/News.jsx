@@ -16,7 +16,7 @@ export const News = () => {
       try {
         const response = await fetch("/api/getNewsTelegram");
         if (!response.ok) {
-          throw new Error("Network response was not ok");
+          throw new Error("Что-то пошло не так 🙄");
         }
         const data = await response.json();
 

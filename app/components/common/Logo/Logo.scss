@@ -1,0 +1,12 @@
+
+.logo{
+    display: none;
+}
+
+@media(max-width:820px){
+    .logo{
+        margin: 16px auto;
+        display: flex;
+        
+    }
+}
